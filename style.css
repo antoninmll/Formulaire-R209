@@ -1,3 +1,4 @@
+/* Réinitialisation de base */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -14,11 +15,12 @@ body {
     padding: 20px;
 }
 
+/* Conteneur principal */
 .form-container {
     background-color: #ffffff;
     padding: 30px;
     border-radius: 8px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     width: 100%;
     max-width: 500px;
 }
@@ -30,6 +32,7 @@ h1 {
     font-size: 1.8rem;
 }
 
+/* Groupes de champs */
 .form-group {
     margin-bottom: 20px;
     display: flex;
@@ -43,9 +46,10 @@ label, .label-like {
     font-size: 0.95rem;
 }
 
+/* Saisies textuelles, sélecteurs et zones de texte */
 input[type="text"],
-input[type="password"]
-input[type="email"]
+input[type="password"],
+input[type="email"],
 select,
 textarea {
     width: 100%;
@@ -62,20 +66,39 @@ input:focus, select:focus, textarea:focus {
     outline: none;
 }
 
+/* Correctif pour le fieldset d'urgence (Accessibilité) */
+.radio-fieldset {
+    border: none;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 20px;
+}
+
+/* Boutons Radio (Alignement horizontal) */
 .radio-group {
     display: flex;
     gap: 15px;
     margin-top: 5px;
 }
 
-.radio-group label {
-    font-weight: normal;
+.radio-item {
     display: flex;
     align-items: center;
-    gap: 5px;
+    gap: 6px;
+}
+
+.radio-item input[type="radio"] {
+    cursor: pointer;
+    width: auto;
+}
+
+.radio-item label {
+    font-weight: normal;
+    margin-bottom: 0;
     cursor: pointer;
 }
 
+/* Case à cocher */
 .checkbox-group {
     flex-direction: row;
     align-items: flex-start;
@@ -94,6 +117,7 @@ input:focus, select:focus, textarea:focus {
     cursor: pointer;
 }
 
+/* Bouton Envoyer */
 .btn-submit {
     background-color: #000000;
     color: white;
@@ -104,10 +128,10 @@ input:focus, select:focus, textarea:focus {
     border-radius: 4px;
     cursor: pointer;
     width: 100%;
-    transition: background-color 0.2s ease;
     margin-top: 10px;
 }
 
+/* Responsive (Mobile de petite taille) */
 @media (max-width: 400px) {
     .radio-group {
         flex-direction: column;
